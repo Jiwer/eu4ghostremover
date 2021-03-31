@@ -31,6 +31,7 @@ def unblock(ip):
 		return
 
 	blockedips.remove(ip)
+	playerips.remove(ip)	
 
 	print("Successfully removed " + ip + " from the block list.")
 	
