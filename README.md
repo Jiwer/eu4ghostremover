@@ -1,7 +1,7 @@
 # eu4ghostremover
 Python script that detects and removes ghosts from your eu4 games.
 
-![alt text](https://i.gyazo.com/f507cda59e961d94335ec6042ed2a059.png)
+![alt text](https://i.gyazo.com/ed35391a37c9ed4d688c18889eebc3c4.png)
 
 USAGE
 ------
