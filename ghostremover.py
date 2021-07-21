@@ -51,15 +51,12 @@ def getinfo(ip):
 	if not type(ip) is str:
 		print("IP must be in string format. An example block would be: getinfo('69.168.1.30')")
 		return
-	try:
-		r = requests.get("http://ipinfo.io/" + ip + "/json", verify=False)
-	except:
-		print("\nConnection refused by ipinfo for " + ip + ", check if this is a Valve server manually.")
-		return	
+	
+	r = requests.get("http://ip-api.com/json/" + ip, verify=False)
 	
 	data = r.json()
 	
-	if "Valve Corporation" in data["org"]:
+	if r.status_code == 200 and "org" in data and "Valve Corporation" in data["org"]:
 		blockedips.add(ip)
 		print("Blocked NAT attmept from " + ip)
 	else:
